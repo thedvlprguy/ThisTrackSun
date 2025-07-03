@@ -1,0 +1,320 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+#app {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Styles */
+header {
+    background-color: #2d2d2d;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #444;
+}
+
+header h1 {
+    color: #00ff88;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+/* Main Content */
+main {
+    flex: 1;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+}
+
+/* Section Styles */
+section {
+    background-color: #2d2d2d;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #444;
+}
+
+section h2 {
+    color: #00ff88;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+/* Form Controls */
+input[type="text"] {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #1a1a1a;
+    border: 1px solid #555;
+    color: #ffffff;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #00ff88;
+}
+
+button {
+    background-color: #00ff88;
+    color: #1a1a1a;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    margin-right: 0.5rem;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #00cc6a;
+}
+
+button:active {
+    background-color: #00aa55;
+}
+
+/* Unblock button styling */
+#unblock-btn {
+    background-color: #ff4444;
+    color: #ffffff;
+}
+
+#unblock-btn:hover {
+    background-color: #cc3333;
+}
+
+/* Connection List */
+#connection-list {
+    list-style: none;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+#connection-list li {
+    padding: 0.5rem;
+    background-color: #1a1a1a;
+    margin-bottom: 0.5rem;
+    border-radius: 4px;
+    border-left: 3px solid #00ff88;
+}
+
+/* Timer Section */
+#timer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.timer-display {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #00ff88;
+    margin: 1rem 0;
+    font-family: 'Courier New', monospace;
+}
+
+.timer-controls {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+/* Group Study Section */
+#group-study {
+    display: flex;
+    flex-direction: column;
+}
+
+.room-input {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.room-input input {
+    flex: 1;
+    margin-bottom: 0;
+}
+
+.session-status {
+    padding: 1rem;
+    background-color: #1a1a1a;
+    border-radius: 4px;
+    border-left: 3px solid #00ff88;
+    margin-top: 1rem;
+}
+
+/* Footer */
+footer {
+    background-color: #2d2d2d;
+    padding: 1rem 2rem;
+    border-top: 1px solid #444;
+    text-align: center;
+    color: #888;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
+    
+    .timer-display {
+        font-size: 2.5rem;
+    }
+    
+    .timer-controls {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    button {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        padding: 0.75rem 1rem;
+    }
+    header h1 {
+        font-size: 1.2rem;
+    }
+    main {
+        padding: 0.5rem;
+        grid-gap: 1rem;
+    }
+    section {
+        padding: 0.75rem;
+    }
+    .timer-display {
+        font-size: 2rem;
+        margin: 0.5rem 0;
+    }
+    .timer-controls {
+        flex-direction: column;
+        gap: 0.5rem;
+        width: 100%;
+    }
+    .timer-controls button {
+        width: 100%;
+        margin-right: 0;
+    }
+    .timer-mode {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-top: 0.5rem;
+    }
+    .timer-mode button {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+    #group-study .room-input {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    #group-study .room-input input,
+    #group-study .room-input button {
+        width: 100%;
+    }
+    footer {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Make timer section take full width on small screens */
+@media (max-width: 480px) {
+    #timer {
+        width: 100%;
+        min-width: 0;
+        padding: 0.5rem 0.25rem;
+    }
+    .timer-display {
+        font-size: 1.5rem;
+    }
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #2d2d2d;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #00ff88;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #00cc6a;
+}
+
+/* Loading States */
+.loading {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.loading::after {
+    content: "Loading...";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #00ff88;
+}
+
+/* Alert/Notification Styles */
+.alert {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 1rem;
+    background-color: #00ff88;
+    color: #1a1a1a;
+    border-radius: 4px;
+    font-weight: 600;
+    z-index: 1000;
+    animation: slideIn 0.3s ease-out;
+}
+
+.alert.error {
+    background-color: #ff4444;
+    color: #ffffff;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

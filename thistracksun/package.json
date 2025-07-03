@@ -1,0 +1,38 @@
+{
+  "name": "thistracksun",
+  "version": "1.0.0",
+  "description": "A distraction prevention desktop app with website/app blocking, study timer, and group sessions",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "vite",
+    "build": "vite build",
+    "electron-dev": "vite & electron . --dev",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "electron",
+    "productivity",
+    "website-blocker",
+    "study-timer",
+    "distraction-prevention"
+  ],
+  "author": "thistracksun",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/thistracksun.git"
+  },
+  "devDependencies": {
+    "electron": "^37.2.0"
+  },
+  "dependencies": {
+    "@clerk/clerk-react": "^5.32.3",
+    "child_process": "^1.0.2",
+    "firebase": "^11.10.0",
+    "fs-extra": "^11.3.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "socket.io-client": "^4.8.1"
+  }
+}
